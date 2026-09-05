@@ -1,0 +1,79 @@
+{
+  "name": "validation-lib",
+  "version": "1.0.0",
+  "description": "Framework-agnostic form validation rules for React, React Native, Next.js and Angular — email, url, min/max, regex, file type/size, checkbox, radio, select and more.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-username>/validation-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/validation-lib/issues"
+  },
+  "homepage": "https://github.com/<your-username>/validation-lib#readme",
+  "keywords": [
+    "validation",
+    "form-validation",
+    "react",
+    "react-native",
+    "nextjs",
+    "angular",
+    "forms",
+    "validator"
+  ],
+  "sideEffects": false,
+  "main": "./dist/core/index.js",
+  "module": "./dist/core/index.mjs",
+  "types": "./dist/core/index.d.ts",
+  "react-native": "./dist/native/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.mjs",
+      "require": "./dist/core/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.mjs",
+      "require": "./dist/react/index.js"
+    },
+    "./native": {
+      "types": "./dist/native/index.d.ts",
+      "import": "./dist/native/index.mjs",
+      "require": "./dist/native/index.js"
+    },
+    "./angular": {
+      "types": "./dist/angular/index.d.ts",
+      "import": "./dist/angular/index.mjs",
+      "require": "./dist/angular/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-native": "*",
+    "@angular/core": ">=15",
+    "@angular/forms": ">=15"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "react-native": { "optional": true },
+    "@angular/core": { "optional": true },
+    "@angular/forms": { "optional": true }
+  },
+  "devDependencies": {
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}
