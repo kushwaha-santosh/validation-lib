@@ -1,5 +1,5 @@
 {
-  "name": "validation-lib",
+  "name": "@kushwaha-santosh/validation-lib",
   "version": "1.0.0",
   "description": "Framework-agnostic form validation rules for React, React Native, Next.js and Angular — email, url, min/max, regex, file type/size, checkbox, radio, select and more.",
   "license": "MIT",

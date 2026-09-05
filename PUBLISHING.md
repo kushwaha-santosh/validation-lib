@@ -117,15 +117,15 @@ npm whoami
 npm view validation-lib
 ```
 - If it prints `404 Not Found` → the name is free, you can publish as `validation-lib`.
-- If it prints existing package info → the name is taken. Either pick a new name, or publish under your own **scope** (see below).
+- If it prints existing package info, or npm rejects the name as "too similar to an existing package" → pick a new name, or publish under your own **scope** (see below).
 
-**Using a scope** (recommended if the plain name is taken, or if you want it namespaced to you):
+**Using a scope** (recommended if the plain name is taken/too similar, or if you want it namespaced to you):
 ```json
 {
-  "name": "@your-npm-username/validation-lib"
+  "name": "@kushwaha-santosh/validation-lib"
 }
 ```
-Scoped packages are private by default, so you must publish with `--access public` (shown below).
+This project is published as `@kushwaha-santosh/validation-lib`. Scoped packages are private by default, so you must publish with `--access=public` (shown below).
 
 ### 4. Build the package
 ```bash
@@ -147,25 +147,25 @@ Unscoped name:
 npm publish
 ```
 
-Scoped name (`@yourname/validation-lib`):
+Scoped name (`@kushwaha-santosh/validation-lib`) — required here:
 ```bash
-npm publish --access public
+npm publish --access=public
 ```
 
 You should see output like:
 ```
-+ validation-lib@1.0.0
++ @kushwaha-santosh/validation-lib@1.0.0
 ```
 
 Your package is now live at:
-`https://www.npmjs.com/package/validation-lib`
+`https://www.npmjs.com/package/@kushwaha-santosh/validation-lib`
 
 ### 7. Install it anywhere to confirm
 ```bash
 mkdir /tmp/test-install && cd /tmp/test-install
 npm init -y
-npm install validation-lib
-node -e "console.log(require('validation-lib').required()(''))"
+npm install @kushwaha-santosh/validation-lib
+node -e "console.log(require('@kushwaha-santosh/validation-lib').required()(''))"
 # → { valid: false, message: 'This field is required' }
 ```
 
@@ -242,7 +242,7 @@ npm login
 # Build + publish
 npm install
 npm run build
-npm publish --access public          # add --access public even for unscoped names, it's harmless
+npm publish --access=public          # required for the @kushwaha-santosh scope
 
 # Later, shipping an update
 npm version patch
