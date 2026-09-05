@@ -1,16 +1,16 @@
 {
   "name": "@kushwaha-santosh/validation-lib",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Framework-agnostic form validation rules for React, React Native, Next.js and Angular — email, url, min/max, regex, file type/size, checkbox, radio, select and more.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/<your-username>/validation-lib.git"
+    "url": "https://github.com/kushwaha-santosh/validation-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/<your-username>/validation-lib/issues"
+    "url": "https://github.com/kushwaha-santosh/validation-lib/issues"
   },
-  "homepage": "https://github.com/<your-username>/validation-lib#readme",
+  "homepage": "https://github.com/kushwaha-santosh/validation-lib#readme",
   "keywords": [
     "validation",
     "form-validation",
